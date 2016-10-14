@@ -1,4 +1,4 @@
-[<img src="https://github.com/ibmdataworks/datafirst/raw/master/datascientist/media/EventHeader.png">](https://github.com/ibmdataworks/datafirst/)
+[<img src="https://github.com/hatv/dataworks/raw/master/media/IBMBizCo.jpg">](https://github.com/hatv/dataworks/)
 #Hands on Labs
 ##Experience the IBM Watson DataWorks Project
 ###Where teams can collaboratively work together...
