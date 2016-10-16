@@ -48,23 +48,23 @@ Before You Begin
 
 2.  If you have followed the first lab about the Business Analyst, you should land on the following page where you can choose to signup
 
- > <img src="./media/image2b.png" width="624" height="171" />
+ > <img src="./media/image2b.png" width="400" />
 
 2.	Else, just click the signup button on the top right on the standard Bluemix homepage
 
- > <img src="./media/image2.png" width="624" height="171" />
+ > <img src="./media/image2.png" width="400" />
 
 3.  On the next page fill in the corresponding fields and click “Create Account”. If you already registered to Watson Analytics before, your IBMid should be recognized and the registration form should be shortened.
 
- > <img src="./media/image3.png" width="624" height="300" />
+ > <img src="./media/image3.png" width="400" />
 
 4.  You will see a page asking you to check your email for next steps. Check your email that you used to sign up for Bluemix
 
- > <img src="./media/image4.png" width="237" height="219" />
+ > <img src="./media/image4.png" width="400" />
 
 5.  Click on the “confirm your account” link
 
- > <img src="./media/image5.png" width="396" height="330" />
+ > <img src="./media/image5.png" width="400" />
 
 6.	You can then login to Bluemix from [www.bluemix.net](https://www.bluemix.net)
 
@@ -72,16 +72,15 @@ Before You Begin
 
 8.	You will be asked to create an organization. At this moment, you can chose between multiple Bluemix public regions. Choose the "US South" region in Dallas to access all the new services (required to cnfigure Data Science Experience in the next lab)
 
-> <img src="./media/image5b.png" width="396" height="330" />
+> <img src="./media/image5b.png" width="400" />
 
 9.	And then, to create a space
 
-> <img src="./media/image5c.png" width="396" height="330" />
+> <img src="./media/image5c.png" width="400" />
 
 10. When it's done, you can go ahead by clicking "I'm ready"
 
-> <img src="./media/image5d.png" width="396" height="330" />
-![](./media/image5d.png =400x)
+> <img src="./media/image5d.png" width="400" />
 
 
 Step 2. Initialize Source Data Repository: Object Storage Service
