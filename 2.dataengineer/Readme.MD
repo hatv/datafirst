@@ -30,7 +30,7 @@ Lab Components: IBM Bluemix Data Connect (formerly DataWorks Forge)
 Before You Begin
 ================
 
-1.  Download the two data files (GOProductDim, GOSalesFact) from the github.com location below to your laptop:
+1.  Download the two data files (GOProductDim, GOSalesFact) from the github.com location below to your laptop (right-click and "Save link as..."):
 
  > https://raw.githubusercontent.com/hatv/dataworks/master/2.dataengineer/data/GOProductDim
  > https://raw.githubusercontent.com/hatv/dataworks/master/2.dataengineer/data/GOSalesFact
@@ -190,17 +190,17 @@ Step 4. Transform and Migrate Data: Data Connect Service
 Data Connect Service Introduction
 ------------------------------------
 
- > <img src="./media/DE Image9.png"/>
+ > <img src="./media/DataConnect.png"/>
  >
- > NOTE: The Bluemix Secure gateway can be used to retrieve data hosted in a secure enterprise environment through a secure network tunnel. Configuring a Secure Gateway service and connecting using a secure tunnel is a simple and intuitive process (the dashboard walks you through the steps). As it was indicated earlier, getting access to a data hosted in an enterprise infrastructure can be a compliance and privacy issue for this lab, we will be using a sample datasets hosted in the IBM Object Storage that would be used as a source data set. This doesn’t need the use of a secure gateway.
+ > NOTE: The Bluemix Secure gateway can be used to retrieve data hosted in a secure enterprise environment through a secure network tunnel. Configuring a Secure Gateway service and connecting using a secure tunnel is a simple and intuitive process (the dashboard walks you through the steps). As it was indicated earlier, getting access to a data hosted in an enterprise infrastructure can be a compliance and privacy issue for this lab, we will be using a sample dataset hosted in the IBM Object Storage that would be used as a source data set. This doesn't need the use of a secure gateway.
  >
- > The flow diagram for creating a data migration process in DataWorks Forge is as shown below: 
+ > The flow diagram for creating a data migration process in Data Connect is as shown below: 
 
 #Step 5. Create Data Connections
 
 ### Create Source Data Connection
 
-1.  From the DataWorks Forge dashboard click on “Tasks”-&gt;““Create Connection”
+1.  From the Data Connect dashboard click on “Tasks”-&gt;“Create Connection”
 
  > This will take you to the list of all available connection drivers.
 
@@ -224,7 +224,7 @@ Data Connect Service Introduction
  >
  > User ID: 123a4567890123456b789012cde34f56
  >
- > Password: ANUP&3NaZiR4PD&r
+ > Password: ANUP&3NaZiR9PD&r
 
 5.  Click on the “CREATE CONNECTION”
 
@@ -234,7 +234,7 @@ Data Connect Service Introduction
 
 ### Create Target Data Connection
 
-1.  From the DataWorks Forge dashboard click on “Tasks”-&gt;“Create Connection”
+1.  From the Data Connect dashboard click on “Tasks”-&gt;“Create Connection”
 
  > This will take you to the list of all available connection drivers.
 
@@ -250,13 +250,13 @@ Data Connect Service Introduction
 
  > You entry would look similar to the following:
  >
- > Hostname or IP Address: awh-yp-small99.services.dal.bluemix.net
+ > Hostname or IP Address: dashdb-entry-yp-dal09-10.services.dal.bluemix.net
  >
  > Database: BLUDB
  >
  > Username: dash999999
  >
- > Password: ANupNAirAjxy1
+ > Password: ANukNAirAjxy1
 
 5.  Click on the “CREATE CONNECTION”
 
@@ -267,11 +267,11 @@ Data Connect Service Introduction
 Create Data Flow (Activity)
 ---------------------------
 
-1.  From the DataWorks Forge dashboard click on “Tasks”-&gt;“Refine and Copy”
+1.  From the Data Connect dashboard click on “Tasks”-&gt;“Refine and Copy”
 
 2.  Click and select the source database: SourceDB
 
-3.  Click and select the Container: datafirst
+3.  Click and select the Container: businessconnect
 
 4.  Click and select the files (checkbox) from the container: GOProductDim, GOSalesFact
 
