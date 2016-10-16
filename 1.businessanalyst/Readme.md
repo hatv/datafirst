@@ -43,7 +43,7 @@ Watch Full Lab Video (Optional): https://youtu.be/T6Aa448WcU4
 
  > <img src="./media/image9.png" width="356" height="207" />
 
-3.  You should now be able to read in a spreadsheet “Great Outdoor Customer Orders.xlsx” that you can download from the Github link: <https://raw.githubusercontent.com/hatv/dataworks/master/1.businessanalyst/data/Great%20Outdoor%20Customer%20Orders.xlsx>
+3.  You should now be able to read in a spreadsheet “Great Outdoor Customer Orders.xlsx” that you can download from the Github link: <https://raw.githubusercontent.com/hatv/dataworks/master/1.businessanalyst/data/GreatOutdoorCustomerOrders.xlsx>
     Click on “Local file” to import the dataset into Watson Analytics.
     
  > <img src="./media/image10.png" width="360" height="175" />
@@ -63,7 +63,7 @@ Watch Full Lab Video (Optional): https://youtu.be/T6Aa448WcU4
 7.  You are now all set to start looking at the interesting insights Watson Analytics automatically finds from the data. Just click on the dataset and you’ll be taken to a screen labelled as “New Discovery Set” as shown below. As “Starting points”, 6 different visualizations are automatically recommended for you to explore (you can click on “Show Next” on the top right to see the next set of guided visualizations), but you can create your own visualization selecting from the 20 different chart types in the bottom of the screen. You also have an option to type in a natural language question on the top and Watson Analytics will suggest an appropriate visualization that likely answers that question! 
  > <img src="./media/image14.png" width="359" height="195" />
 
-8.  Let’s scroll back to the top and type in a question “Show the breakdown of Transactions by Product Line and Product Type” and hit enter. You will automatically be provided a set of starting points starting with the most relevant visualization that helps answer your question! Let’s click on the tree map on the top left (the first visualization listed as “Most relevant” under “Starting points”).
+8.  Let’s scroll back to the top and type in a question “Show me the number of transactions by line of product and product item” and hit enter. You will automatically be provided a set of starting points starting with the most relevant visualization that helps answer your question! Let’s click on the tree map on the top left (the first visualization listed as “Most relevant” under “Starting points”).
 
  > <img src="./media/image15.png" width="363" height="141" />
 
