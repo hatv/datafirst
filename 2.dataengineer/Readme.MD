@@ -81,6 +81,7 @@ Before You Begin
 10. When it's done, you can go ahead by clicking "I'm ready"
 
 > <img src="./media/image5d.png" width="396" height="330" />
+![](./media/image5d.png =400x)
 
 
 Step 2. Initialize Source Data Repository: Object Storage Service
