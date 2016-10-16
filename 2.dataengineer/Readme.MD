@@ -32,7 +32,8 @@ Before You Begin
 
 1.  Download the two data files (GOProductDim, GOSalesFact) from the github.com location below to your laptop:
 
- > https://github.com/ibmdataworks/datafirst/tree/master/dataengineer
+ > https://raw.githubusercontent.com/hatv/dataworks/master/2.dataengineer/data/GOProductDim
+ > https://raw.githubusercontent.com/hatv/dataworks/master/2.dataengineer/data/GOSalesFact
 
 2.  Log in to your IBM Cloud Bluemix account <https://console.ng.bluemix.net/login?state=/home/onboard/>
 
@@ -86,25 +87,25 @@ Before You Begin
 Step 2. Initialize Source Data Repository: Object Storage Service
 =========================================================
 
-1.  From the Bluemix dashboard catalog menu search for “Object Storage”
+1.  From the Bluemix dashboard catalog menu, search for “Object Storage”
 
-2.  Click on the Object Storage Icon <img src="./media/image2.png" width="57" height="50" />
+2.  Click on the Object Storage icon <img src="./media/image2.png" width="57" height="50" />
 
 3.  Choose the default pre-filled values in the fields (optionally rename the “Service name:” to DE-DataIngest-ObjStorage), select the “Free Pricing Plan” and click “Create” at the bottom of the page.
 
-4.  Click on “Actions-&gt;Add Container” and enter “datafirst" as the container name.
+4.  In the Console, where all configured services are listed, click on the newly created “Object Storage” service click on “Actions-&gt;Add Container” and enter “businessconnect” as the container name.
 
- > NOTE: Once a new container is created, you get this message "There are no files in the container you selected. Add files or view Object Storage documentation."
+ > NOTE: Once a new container is created, you get this message “There are no files in the container you selected. Add files or view Object Storage documentation.”
 
 5.  Click on “Add files”.
 
 6.  Select and add the files previously downloaded (GOProductDim, GOSalesFact) to this Container.
 
- > NOTE: Your data files are now moved to the Object Storage into the Bluemix.
+ > NOTE: Your data files are now moved to the OpenStack Swift Object Storage into Bluemix.
 
 7.  From the Object Storage Service menu (scroll up the browser page), click on “Service Credentials” option.
 
-8.  Select the Key Name for your service (e.g. Credentials-1) and select the “View Credentials” down triangle (<img src="./media/image3.png" width="157" height="31" /> ) under the ACTIONS column.
+8.  If you don't have any, click on “New Credential” to configure them. Give them a name. Select the Key Name for your service (e.g. Credentials-1) and select the “View Credentials” down triangle (<img src="./media/image3.png" width="157" height="31" /> ) under the ACTIONS column.
 
  > It will show the credential details similar to the following:
  >
@@ -115,17 +116,17 @@ Step 2. Initialize Source Data Repository: Object Storage Service
  > "region": "dallas", <br />
  > "userId": "123a4567890123456b789012cde34f56", <br />
  > "username": "admin\_123a4567890123455a67ce456b789012cde34f56", <br />
- > "password": "ANUP&3NaZiR4PD&r=", <br />
+ > "password": "ANUP&3NaZiR9PD&r=", <br />
  > "domainId": "cc421938a87348739a6bdc374424273d", <br />
  > "domainName": "1531219", <br />
  > "role": "admin" <br />
  > }
 
-9.  Copy the credentials by clicking on the blue square (<img src="./media/image4.png" width="30" height="36" />) on the top right corner of the window and paste it into a notepad (Windows) / textedit (Mac) / vi (Linux). This information will be needed later for use in DataWorks Forge to create and establish the connection to the object store.
+9.  Copy the credentials by clicking on the blue square (<img src="./media/image4.png" width="30" height="36" />) on the top right corner of the window and paste it into a notepad (Windows) / textedit (Mac) / vi (Linux). This information will be needed later for use in Data Connect to create and establish the connection to the Object Store.
 
- > From the credential details above, only the values from the following tokens ( as highlighted in blue) will be needed in DataWorks Forge to establish connection to the Object Store: "auth\_url", "projectId", "region", "userId", "password"
+ > From the credential details above, only the values from the following tokens (as highlighted in blue) will be needed in Data Connect to establish connection to the Object Store: "auth\_url", "projectId", "region", "userId", "password"
 
-10.  The source data repository to be used with DataWorks Forge later is now ready. Let’s create a target data repository.
+10.  The source data repository to be used with Data Connect later is now ready. Let’s create a target data repository.
 
 11.  From the top of the browser page click on the “Catalog” option. This will take you back to the Bluemix dashboard catalog menu.
 
@@ -138,56 +139,55 @@ Step 3. Initialize Target Data Repository: dashDB Service
 
 3.  Choose the default pre-filled values in the fields (optionally rename the “Service name:” to DE-DataIngest-dashDB), select the “Entry Pricing Plan” (default) and click “Create” at the bottom of the page.
 
-4.  From the dashDB Service menu (scroll up the browser page), click on “Service Credentials” option (you may have to click on the double arrow button on the “Back to Dashboard for…” option).
+4.  From the dashDB Service menu (scroll up the browser page), click on “Service Credentials” option (you may have to click on the double arrow button on the “Back to Dashboard for…” option). Select the Key Name for your service (e.g. Credentials-1) and select the “View Credentials” down triangle (<img src="./media/image3.png" width="157" height="31" /> ) under the ACTIONS column.
 
  > It will show the credential details similar to the following:
  >
  > { <br />
- > "credentials": { <br />
  > "port": 50000, <br />
  > "db": "BLUDB", <br />
  > "username": "dash999999", <br />
- > "ssljdbcurl": "jdbc:db2://awh-yp-small99.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;", <br />
- > "host": "awh-yp-small99.services.dal.bluemix.net", <br />
- > "https\_url": "https://awh-yp-small99.services.dal.bluemix.net:8443", <br />
- > "dsn": "DATABASE=BLUDB;HOSTNAME=awh-yp-small99.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=dash999999;PWD=ANupNAirAjxy1;", <br />
- > "hostname": "awh-yp-small99.services.dal.bluemix.net", <br />
- > "jdbcurl": "jdbc:db2://awh-yp-small99.services.dal.bluemix.net:50000/BLUDB", <br />
- > "ssldsn": "DATABASE=BLUDB;HOSTNAME=awh-yp-small99.services.dal.bluemix.net;PORT=50001;PROTOCOL=TCPIP;UID=dash999999;PWD=ANupNAirAjxy1;Security=SSL;", <br />
- > "uri": "db2://dash999999:ANupNAirAjxy1@awh-yp-small99.services.dal.bluemix.net:50000/BLUDB", <br />
- > "password": "ANupNAirAjxy1" <br />
+ > "ssljdbcurl": "jdbc:db2://dashdb-entry-yp-dal09-10.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;", <br />
+ > "host": "dashdb-entry-yp-dal09-10.services.dal.bluemix.net", <br />
+ > "https\_url": "https://dashdb-entry-yp-dal09-10.services.dal.bluemix.net:8443", <br />
+ > "dsn": "DATABASE=BLUDB;HOSTNAME=dashdb-entry-yp-dal09-10.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=dash999999;PWD=ANukNAirAjxy1;", <br />
+ > "hostname": "dashdb-entry-yp-dal09-10.services.dal.bluemix.net", <br />
+ > "jdbcurl": "jdbc:db2://dashdb-entry-yp-dal09-10.services.dal.bluemix.net:50000/BLUDB", <br />
+ > "ssldsn": "DATABASE=BLUDB;HOSTNAME=dashdb-entry-yp-dal09-10.services.dal.bluemix.net;PORT=50001;PROTOCOL=TCPIP;UID=dash999999;PWD=ANukNAirAjxy1;Security=SSL;", <br />
+ > "uri": "db2://dash999999:ANukNAirAjxy1@dashdb-entry-yp-dal09-10.services.dal.bluemix.net:50000/BLUDB", <br />
+ > "password": "ANukNAirAjxy1" <br />
  > }
 
-5.  Copy the credentials by clicking on the blue square (<img src="./media/image4.png" width="30" height="36" />) on the top right corner of the window and paste it into a notepad (Windows) / textedit (Mac) / vi (Linux). This information will be needed later for use in DataWorks Forge to create and establish the connection to dashDB.
+5.  Copy the credentials by clicking on the blue square (<img src="./media/image4.png" width="30" height="36" />) on the top right corner of the window and paste it into a notepad (Windows) / textedit (Mac) / vi (Linux). This information will be needed later for use in Data Connect to create and establish the connection to dashDB.
 
- > From the credential details above, only the values from the following tokens ( as highlighted in blue) will be needed in DataWorks Forge to establish connection to dashDB: "host", "db", "username", "password"
+ > From the credential details above, only the values from the following tokens (as highlighted in blue) will be needed in Data Connect to establish connection to dashDB: "host", "db", "username", "password"
  >
  > NOTE: You can also retrieve the connection information by Opening the dashDB console (Manage-&gt;Open from dashboard) and within the console clicking on “Connect-&gt; Connection information”. You get the information screen similar to the following:
  >
  > <img src="./media/image6.png" width="559" height="162" />
 
-6.  The target data repository to be used with DataWorks Forge later is now ready. Let’s work with DataWorks Forge to transform and migrate data.
+6.  The target data repository to be used with Data Connect later is now ready. Let’s work with Data Connect to transform and migrate data.
 
  > NOTE: Although we have created the database service, it is optional to port the source schema to this target database. More information about this in the next section.
 
 7.  From the top of the browser page click on the “Catalog” option. This will take you back to the Bluemix dashboard catalog menu.
 
-Step 4. Transform and Migrate Data: DataWorks Forge Service
+Step 4. Transform and Migrate Data: Data Connect Service
 ===================================================
 
-1.  From the Bluemix dashboard catalog menu search for “dataworks”
+1.  From the Bluemix dashboard catalog menu search for “data connect”
 
-2.  Click on the DataWorks Icon <img src="./media/image7.png" width="47" height="52" />
+2.  Click on the Data Connect icon <img src="./media/image7.png" width="47" height="52" />
 
-3.  Choose the default pre-filled values in the fields (optionally rename the “Service name:” to DE-DataIngest-DataWorks), select the “Starter Pricing Plan” (default) and click “Create” button on the side panel.
+3.  Choose the default pre-filled values in the fields (optionally rename the “Service name:” to DE-DataIngest-DataConnect), select the “Starter Pricing Plan” (default) and click “Create” button on the side panel.
 
- > NOTE: Once the service is provisioned it will invoke the DataWorks Forge Service dashboard where you can explore additional resources like IBM DataWorks™ APIs, Learning Center, Discussion forums etc.
+ > NOTE: Once the service is provisioned it will invoke the Data Connect Service dashboard where you can explore additional resources like IBM Data Connect APIs, Learning Center, discussion forums, etc.
 
-4.  To launch the DataWorks Forge service just created, click the arrow icon (<img src="./media/image8.png" width="61" height="63" />) in the IBM DataWorks™ section on the provisioning dashboard. This brings you to the DataWorks Forge dashboard which looks like this:
+4.  To launch the Data Connect service just created, click the “Launch” button in the IBM Data Connect section on the provisioning dashboard. This brings you to the Data Connect dashboard which looks like this:
 
  > <img src="./media/image9.png"/>
 
-DataWorks Forge Service Introduction
+Data Connect Service Introduction
 ------------------------------------
 
  > <img src="./media/DE Image9.png"/>
