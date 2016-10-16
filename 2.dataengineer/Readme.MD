@@ -72,15 +72,15 @@ Before You Begin
 
 8.	You will be asked to create an organization. At this moment, you can chose between multiple Bluemix public regions. Choose the "US South" region in Dallas to access all the new services (required to cnfigure Data Science Experience in the next lab)
 
-> <img src="../4.applicationdeveloper/media/image5b.png" width="400" />
+ > <img src="../4.applicationdeveloper/media/image5b.png" width="400" />
 
 9.	And then, to create a space
 
-> <img src="../4.applicationdeveloper/media/image5c.png" width="400" />
+ > <img src="../4.applicationdeveloper/media/image5c.png" width="400" />
 
 10. When it's done, you can go ahead by clicking "I'm ready"
 
-> <img src="../4.applicationdeveloper/media/image5d.png" width="400" />
+ > <img src="../4.applicationdeveloper/media/image5d.png" width="400" />
 
 
 Step 2. Initialize Source Data Repository: Object Storage Service
