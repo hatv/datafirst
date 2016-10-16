@@ -1,13 +1,13 @@
 [<img src="https://github.com/hatv/dataworks/raw/master/media/IBMBizCo.jpg">](http://www.ibm.com/fr/businessconnect/)
 #Hands on Lab - Business Analyst.
-[<img src="https://github.com/hatv/dataworks/raw/master/1.businessanalyst/media/BusinessAnalystRole.png">](https://github.com/hatv/dataworks/tree/master/1.businessanalyst/)
+[<img src="./media/BusinessAnalystRole.png">](https://github.com/hatv/dataworks/tree/master/1.businessanalyst/)
 
 As a Business Analyst, you need to analyze, discover and visualize business data to derive insights.
 Perform this hands-on lab using guided exploration capabilities on customer transaction data to uncover insights about transactions and product affinities. You can then define your business questions and strategy more accurately to communicate with your hierarchy and other data professionnals from your company.
  
 Watch Full Lab Video (Optional): https://youtu.be/T6Aa448WcU4
 
- > [<img src="https://github.com/hatv/dataworks/blob/master/datascientist/media/BusinessAnalystVideo.png" width="382">](https://youtu.be/T6Aa448WcU4 "Business Analyst Video")
+ > [<img src="./media/BusinessAnalystVideo.png" width="382">](https://youtu.be/T6Aa448WcU4 "Business Analyst Video")
 
 #Step 1. Get a free IBM Watson Analytics account...
 
@@ -43,7 +43,7 @@ Watch Full Lab Video (Optional): https://youtu.be/T6Aa448WcU4
 
  > <img src="./media/image9.png" width="356" height="207" />
 
-3.  You should now be able to read in a spreadsheet “Great Outdoor Customer Orders.xlsx” that you can download from the Github link: <https://github.com/hatv/dataworks/raw/master/1.businessanalyst/data/Great Outdoor Customer Orders.xlsx>
+3.  You should now be able to read in a spreadsheet “Great Outdoor Customer Orders.xlsx” that you can download from the Github link: <https://raw.githubusercontent.com/hatv/dataworks/master/1.businessanalyst/data/Great%20Outdoor%20Customer%20Orders.xlsx>
     Click on “Local file” to import the dataset into Watson Analytics.
     
  > <img src="./media/image10.png" width="360" height="175" />
