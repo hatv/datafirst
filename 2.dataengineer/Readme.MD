@@ -1,66 +1,87 @@
-[<img src="https://github.com/ibmdataworks/datafirst/raw/master/datascientist/media/EventHeader.png">](https://github.com/ibmdataworks/datafirst/)
+[<img src="https://github.com/hatv/dataworks/raw/master/media/IBMBizCo.jpg">](http://www.ibm.com/fr/businessconnect/)
 #Hands on Lab - Data Engineer - IBM Bluemix Data Connect
-[<img src="https://github.com/ibmdataworks/datafirst/raw/master/datascientist/media/DEE2E.png">](https://github.com/ibmdataworks/datafirst/tree/master/dataengineer)
+[<img src="./media/DataEngineerRole.png">](https://github.com/hatv/dataworks/tree/master/2.dataengineer)
 
-As a Data Engineer, you need to cleanse, organize, standardize, tranform and move data at scale.
+As a Data Engineer, you need to cleanse, organize, standardize, tranform and move data at scale between many data repositories on cloud and on premise.
 Perform hands-on exercises and in a few clicks you can standardize, transform, and move sales and customer data into a relational data warehouse.
 
-Setting up an enterprise level data movement infrastructure and then ingesting that data from a secure environment to a cloud repository can be challenging. As a Data Engineer, you need a simple point and click solution to move, discover, cleanse, standardize and transform data to support analytic applications. IBM Cloud Solutions with its DataWorks Forge as-a-Service solves this challenge by seamlessly connecting, transforming and ingesting the data into the secure IBM Cloud.
+Setting up an enterprise level data movement infrastructure and then ingesting that data from a secure environment to a cloud repository can be challenging. As a Data Engineer, you need a simple point and click solution to move, discover, cleanse, standardize and transform data to support analytic applications. IBM Cloud Solutions with its Data Connect as-a-Service solves this challenge by seamlessly connecting, transforming and ingesting the data into the secure IBM Cloud.
  >
- > The extremely intuitive and efficient DataWorks Forge service, with its wide collection of data stores connections, prepares and ingests the data to the IBM cloud with ease and robustness.
+ > The extremely intuitive and efficient Data Connect service, with its wide collection of data stores connections, prepares and ingests the data to the IBM cloud with ease and robustness.
  >
- > In this lab we will explore how a data engineer utilizes DataWorks Forge and other IBM Bluemix cloud services to easily host, connect, ingest and persist enterprise data on to the cloud.
+ > In this lab we will explore how a data engineer utilizes Data Connect and other IBM Bluemix cloud services to easily host, connect, ingest and persist enterprise data on to the cloud.
 
 Video of Lab Steps: https://youtu.be/655-6SPhkNI
-[<img src="https://github.com/ibmdataworks/datafirst/blob/master/datascientist/media/DE%20Video.png">](https://youtu.be/655-6SPhkNI)
+[<img src="./media/DataengineerVideo.png">](https://youtu.be/655-6SPhkNI)
 
-Lab Components: IBM Bluemix Data Connect (formerly DataWorks)
+Lab Components: IBM Bluemix Data Connect (formerly DataWorks Forge)
 ===============================================
 
 1.  **Source Data Repository**: **Object Storage Service**
 
- > NOTE: This usually is the data hosted in a secure enterprise environment that could be securely retrieved through a network tunnel using the BlueMix Secure gateway. Since getting access to a data hosted in an enterprise infrastructure can be a compliance and privacy issue for this lab, we will be using sample datasets hosted in the IBM Object Storage that would be used as a source data set.
+ > NOTE: This usually is the data hosted in a secure enterprise environment that could be securely retrieved through a network tunnel using the Bluemix Secure gateway. Since getting access to a data hosted in an enterprise infrastructure can be a compliance and privacy issue for this lab, we will be using sample datasets hosted in the IBM Object Storage that would be used as a source data set.
 
 2.  **Target Data Repository**: **dashDB Service**
 
-3.  **Transform and Migrate**: **DataWorks Service**
+3.  **Transform and Migrate**: **Data Connect Service**
 
 <img src="./media/image1.png" width="69" height="68" />
 
 Before You Begin
 ================
 
-1.  Download Lab-DataWorksForge.zip archive from the github.com location below and extract the two data files (GOProductDim, GOSalesFact) to your laptop:
+1.  Download the two data files (GOProductDim, GOSalesFact) from the github.com location below to your laptop:
 
  > https://github.com/ibmdataworks/datafirst/tree/master/dataengineer
 
 2.  Log in to your IBM Cloud Bluemix account <https://console.ng.bluemix.net/login?state=/home/onboard/>
 
-> NOTE: If you don’t have a Bluemix account then get started for free by registering using the URL [http://www.ibm.com/cloud-computing/bluemix/](http://www.ibm.com/cloud-computing/bluemix/%20) or <https://console.ng.bluemix.net/registration/>
+> NOTE: If you don’t have a Bluemix account then get started for free by registering using the URL <https://console.ng.bluemix.net/registration/>
 
 
-#Step 1. Get on BlueMix.
+#Step 1. Get on Bluemix.
 
 > NOTE: If you already have a Bluemix account then skip this steps:
 
 
 1.  Go to [www.bluemix.net](https://www.bluemix.net)
 
-2.  Click the signup button on the top right
+2.  If you have followed the first lab about the Business Analyst, you should land on the following page where you can choose to signup
 
- > <img src="https://github.com/ibmdataworks/datafirst/blob/master/appdeveloper/media/image2.png" width="624" height="171" />
+ > <img src="./media/image2b.png" width="624" height="171" />
 
-3.  On the next page fill in the corresponding fields and click “Create Account”
+2.	Else, just click the signup button on the top right on the standard Bluemix homepage
 
- > <img src="https://github.com/ibmdataworks/datafirst/blob/master/appdeveloper/media/image3.png" width="624" height="300" />
+ > <img src="./media/image2.png" width="624" height="171" />
+
+3.  On the next page fill in the corresponding fields and click “Create Account”. If you already registered to Watson Analytics before, your IBMid should be recognized and the registration form should be shortened.
+
+ > <img src="./media/image3.png" width="624" height="300" />
 
 4.  You will see a page asking you to check your email for next steps. Check your email that you used to sign up for Bluemix
 
- > <img src="https://github.com/ibmdataworks/datafirst/blob/master/appdeveloper/media/image4.png" width="237" height="219" />
+ > <img src="./media/image4.png" width="237" height="219" />
 
 5.  Click on the “confirm your account” link
 
- > <img src="https://github.com/ibmdataworks/datafirst/blob/master/appdeveloper/media/image5.png" width="396" height="330" />
+ > <img src="./media/image5.png" width="396" height="330" />
+
+6.	You can then login to Bluemix from [www.bluemix.net](https://www.bluemix.net)
+
+7.	If you don't automatically get to it, follow this link to go to the first configuration steps: https://console.ng.bluemix.net/login?state=/home/onboard/
+
+8.	You will be asked to create an organization. At this moment, you can chose between multiple Bluemix public regions. Choose the "US South" region in Dallas to access all the new services (required to cnfigure Data Science Experience in the next lab)
+
+> <img src="./media/image5b.png" width="396" height="330" />
+
+9.	And then, to create a space
+
+> <img src="./media/image5c.png" width="396" height="330" />
+
+10. When it's done, you can go ahead by clicking "I'm ready"
+
+> <img src="./media/image5d.png" width="396" height="330" />
+
 
 Step 2. Initialize Source Data Repository: Object Storage Service
 =========================================================
