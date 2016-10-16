@@ -50,7 +50,7 @@ Before You Begin
 
  > <img src="./media/image2b.png" width="400" />
 
-2.	Else, just click the signup button on the top right on the standard Bluemix homepage
+	Else, just click the signup button on the top right on the standard Bluemix homepage
 
  > <img src="../4.applicationdeveloper/media/image2.png" width="400" />
 
