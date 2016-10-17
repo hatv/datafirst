@@ -330,7 +330,7 @@ Validate Data Flow Run Activity
 
 2.  Click on the three dots (<img src="./media/image19.png" width="17" height="37" />) on the right-top corner for the activity titled “LoadDataAsIs”. This will pop up additional sub-activity icons
 
- > <img src="./media/image23.png" width="267" height="157" />
+ > <img src="./media/image20.png" width="267" height="157" />
  > 
  > You can Run (<img src="./media/image21.png" width="43" height="42" />), Schedule (<img src="./media/image22.png" width="45" height="45" />), delete (<img src="./media/image23.png" width="42" height="42" />), edit (<img src="./media/image23b.png" width="42" height="42" />) the activity OR find more details (<img src="./media/image24.png" width="41" height="42" />) about the run.
 
