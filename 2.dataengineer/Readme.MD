@@ -326,13 +326,13 @@ Create Data Flow (Activity)
 Validate Data Flow Run Activity
 -------------------------------
 
-1.  From the DataWorks Forge dashboard click on “Browse”-&gt;“Activities”
+1.  From the Data Connect dashboard click on “Browse”-&gt;“Activities”
 
 2.  Click on the three dots (<img src="./media/image19.png" width="17" height="37" />) on the right-top corner for the activity titled “LoadDataAsIs”. This will pop up additional sub-activity icons
 
  > <img src="./media/image20.png" width="267" height="157" />
  > 
- > You can Run (<img src="./media/image21.png" width="43" height="42" />), Schedule (<img src="./media/image22.png" width="45" height="45" />), delete (<img src="./media/image23.png" width="42" height="42" />) the activity OR find more details (<img src="./media/image24.png" width="41" height="42" />) about the run.
+ > You can Run (<img src="./media/image21.png" width="43" height="42" />), Schedule (<img src="./media/image22.png" width="45" height="45" />), delete (<img src="./media/image23.png" width="42" height="42" />), edit (<img src="./media/image23b.png" width="42" height="42" />) the activity OR find more details (<img src="./media/image24.png" width="41" height="42" />) about the run.
 
 3.  Let find out about the detailed status of the run. Either click on the activity name icon “LoadDataAsIs“ or click on the expanded details (<img src="./media/image24.png" width="41" height="42" />) icon.
 
@@ -343,11 +343,9 @@ Validate Data Flow Run Activity
 Validate Migrated Data
 ----------------------
 
-1.  Go to the main Bluemix portal and click on DASHBOARD (Top of the browser)
+1.  Go to the main Bluemix portal and click on “Console”-&gt;“Console” (top left of the browser).
 
- > NOTE: You may already have a browser tab open from where you invoked the DataWorks Forge service (<img src="./media/image27.png" width="278" height="42" />). Go to that tab and click on <img src="./media/image28.png" width="121" height="28" />. This will take you back to the provisioned services dashboard.
-
-2.  Under the Services section on this browser page click on the dashDB service that was created in section titled “Initialize Target Data Repository: dashDB Service “.
+2.  Under the Services section on this browser page click on the dashDB service that was created in section titled “Initialize Target Data Repository: dashDB Service”.
 
 3.  This will open up the dashDB launch board. Click on the “OPEN” button. This will launch the dashDB dashboard.
 
@@ -359,7 +357,7 @@ Validate Migrated Data
 
 2.  You can also run other SELECT commands to check if the resultant data is valid especially if you have refined the incoming data.
 
-> NOTE: For this lab the *SchemaName would be the* username as indicated in section titled Initialize Target Data Repository: dashDB Service step 4.
+> NOTE: For this lab the *SchemaName* would be the username as indicated in section titled “Initialize Target Data Repository: dashDB Service” step 4.
 >
 > **Option 2**
 
@@ -372,11 +370,9 @@ Validate Migrated Data
 Delete All Provisioned Services (Optional)
 ------------------------------------------
 
-1.  Go to the main Bluemix portal and click on DASHBOARD (Top of the browser)
+1.  Go to the main Bluemix portal and click on “Console”-&gt;“Console” (top left of the browser).
 
- > NOTE: You may already have a browser tab open from where you invoked the dashDB service (<img src="./media/image27.png" width="278" height="42" />). Go to that tab and click on <img src="./media/image28.png" width="121" height="28" />. This will take you back to the provisioned services dashboard.
-
-2.  Under the Services section you will see the three services you had created (Object Storage, DataWorks Forge and dashDB)
+2.  Under the Services section you will see the three services you had created (Object Storage, Data Connect and dashDB)
 
 3.  To delete the service click on the three dots (<img src="./media/image19.png" width="17" height="37" />) under the actions column and click “Delete Service”. This will pop up a confirmation dialog box that says:
 
