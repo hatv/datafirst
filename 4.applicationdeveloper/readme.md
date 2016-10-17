@@ -61,11 +61,11 @@ Watch Full Lab Video (Optional): https://youtu.be/jhFo47juTFI
 
  > <img src="./media/image5d.png" width="400" />
 
-#Step 2. Dowload Application Code & Data Files
+#Step 2. Download Application Code & Data Files
 
-1.  Download Lab-NodejsDashboard.zip archive from the github.com location below and save to your laptop: [nodejsDashboard.zip](./application/nodejsDashboard.zip)
+1.  Download Lab-NodejsDashboard.zip archive from the github.com location below and save to your laptop: [nodejsDashboard.zip](https://github.com/hatv/dataworks/raw/master/4.applicationdeveloper/application/nodejsDashboard.zip)
 
-2.	Download the JSON data to upload to Cloudant and the cURL script from the github.com location below and save them to your laptop: [data.zip](./data/data.zip)
+2.	Download the JSON data to upload to Cloudant and the cURL script from the github.com location below and save them to your laptop: [data.zip](https://github.com/hatv/dataworks/raw/master/4.applicationdeveloper/data/data.zip)
 
 Step 3. Create Data Source - Cloudant NoSQL DB Service
 ============================================================
@@ -108,15 +108,16 @@ function(doc) {
 
 16. You now have to load the data to the Cloudant database. Those JSON files could have been loaded in Cloudant by a streaming application from Wi-Fi hotspot devices deployed in the shop. First, you have to get the Cloudant API URL in the Cloudant service credentials.
 
-17. Go back to your Bluemix homepage, under "Data & Analytics", service "Cloudant NoSQL DB" and then "Service Credentials". Your URL should look like: https://4fde2747-1360-479e-b278-3742634efaee-bluemix:aedb9a613f633229177d7765ecbb95e1467e754317724057f5710963f303e69a@4fde2747-1360-479e-b278-3742634efaee-bluemix.cloudant.com
+17. Go back to your Bluemix homepage, under "Data & Analytics", service "Cloudant NoSQL DB" and then "Service Credentials". Your URL should look like: 
+ > https://4fde2747-1360-479e-b278-3742634efaee-bluemix:aedb9a613f633229177d7765ecbb95e1467e754317724057f5710963f303e69a@4fde2747-1360-479e-b278-3742634efaee-bluemix.cloudant.com
 
 18. Unzip the data.zip file that you got from step 2 and edit the load_data.sh script with your Cloudant URL. This script calls the Cloudant REST API to bulk load JSON files into a database.
 
 19. Invoke the script with **bash load_data.sh**. You need cURL to be installed on your machine. If you are using Windows, you can download a portable console emulator such as http://cmder.net/
 
-<img src="./media/image0.png">
+ > <img src="./media/image0.png">
 
-20.	You are now ready to move to the next service – SDK for Node.js Runtime. Return to the previous browser tab and click on the **catalog** button in the top navigation bar.
+20.	You are now ready to move to the next service – SDK for Node.js Runtime. Return to the Bluemix tab and click on the **Catalog** button in the top navigation bar.
 
 Step 4. Create Application - SDK for Node.js Runtime Service
 ==================================================================
@@ -127,7 +128,7 @@ Step 4. Create Application - SDK for Node.js Runtime Service
 
 3.  Click on the **SDK for Node.js** icon <img src="./media/image8.png" width="37" height="37" />
 
-4.  Create a name the service and the host. *Note: The host name needs to be unique. If you receive an error message it is likely that the host name you created is already in use.*
+4.  Create a name for the service and the host. *Note: The host name needs to be unique. If you receive an error message it is likely that the host name you created is already in use.*
 
 5.  Choose the default pricing plan and click “**Create**” at the bottom of the page.
 
@@ -137,7 +138,7 @@ Step 4. Create Application - SDK for Node.js Runtime Service
 
     a.  Click on the blue “**Connect Existing**” button on the top, right side of the page.
 
-    b.  Click on the **NoSQL Cloudant DB** service you created in section 4 and click **Connect**
+    b.  Click on the **NoSQL Cloudant DB** service you created in section 3 and click **Connect**
 
     c.  You will be prompted to restage your application. Click **Restage**.
 
@@ -145,11 +146,11 @@ Step 4. Create Application - SDK for Node.js Runtime Service
 
     e.  Binding services allows the Node.js service to authenticate to Cloudant without hard coding credentials in the JavaScript code. It uses environment variables on the server-side to share the credentials between services.
 
-7.  In the top, navigation bar click the “**Overview**” tab.
+7.  In the top navigation bar click the “**Overview**” tab.
 
-    a.  In the Continuous Delivery panel select “**Add Git Repo and Pipeline**”
+    a.  In the Continuous Delivery panel select “**Add Git Repo and Pipeline**”. You may have to log back to your Bluemix account.
 
-    b.  If you already have a jazz.net account bind with that account. Otherwise, enter a n alias (account name) to allow Bluemix to create a Dev Ops account for you.
+    b.  If you already have a jazz.net account bind with that account. Otherwise, enter an alias (account name) to allow Bluemix to create a DevOps account for you.
 
     c.  Accept the DevOps Services terms by ticking the box.
 
@@ -169,7 +170,6 @@ Step 4. Create Application - SDK for Node.js Runtime Service
 
 	j.  You should see two stages which have been created for you. One for Build and the other for Deploy.
 
-
 8.  DevOps Service for Bluemix
 
     a.  Click on the settings “star” icon for the **Build Stage** and select **Configure Stage**.
@@ -188,7 +188,7 @@ Step 4. Create Application - SDK for Node.js Runtime Service
 
     c.  In the Application Menu select File -&gt; Import -&gt; File or Zip Archive
 
-    d.  Browse to the zip file you downloaded in the Before You Begin section.
+    d.  Browse to the zip file you downloaded in the "Before You Begin" section.
 
     e.  You will be prompted if it should unzip the .zip file. Click **OK**.
 
@@ -196,11 +196,11 @@ Step 4. Create Application - SDK for Node.js Runtime Service
 
     g.  Click **Yes**.
 
-    h.  You will need to edit **Manifest.yml** to change the location where the application is hosted. Change both occurrences of NodejsDashboard to the name of your mybluemix.net host route. The host is usually the same name as your project unless there was a conflict. Note: The file will save automatically.
+    h.  You will need to edit **Manifest.yml** to change the location where the application is hosted. Change both occurrences of **greatoutdoors-johan** to the name of your mybluemix.net host route. The host is usually the same name as your project unless there was a conflict. If you created the application on another public region than "US South" (Dallas), you also have to change the domain from **mybluemix.net** (**eu-gb.mybluemix.net** in UK for instance). Note: The file will save automatically.
 
 10.  In the left-hand navigation bar click the **Git** icon <img src="./media/image9.png" width="29" height="32" /> just below “**edit code**”
 
-    a.  Allow the page to completely refresh all the code changes. You should see 11 files selected in the right-hand pane.
+    a.  Allow the page to completely refresh all the code changes. You should see 12 files selected in the right-hand pane.
 
     b.  Enter a comment into the comment window and click **Commit**.
 
