@@ -31,19 +31,19 @@ Watch Full Lab Video (Optional): https://youtu.be/jhFo47juTFI
 
 	Else, just click the signup button on the top right on the standard Bluemix homepage
 
- > <img src="../4.applicationdeveloper/media/image2.png" width="400" />
+ > <img src="./media/image2.png" width="400" />
 
 3.  On the next page fill in the corresponding fields and click “Create Account”. If you already registered to Watson Analytics before, your IBMid should be recognized and the registration form should be shortened.
 
- > <img src="../4.applicationdeveloper/media/image3.png" width="400" />
+ > <img src="./media/image3.png" width="400" />
 
 4.  You will see a page asking you to check your email for next steps. Check your email that you used to sign up for Bluemix
 
- > <img src="../4.applicationdeveloper/media/image4.png" width="400" />
+ > <img src="./media/image4.png" width="400" />
 
 5.  Click on the “confirm your account” link
 
- > <img src="../4.applicationdeveloper/media/image5.png" width="400" />
+ > <img src="./media/image5.png" width="400" />
 
 6.	You can then login to Bluemix from [www.bluemix.net](https://www.bluemix.net)
 
@@ -51,86 +51,72 @@ Watch Full Lab Video (Optional): https://youtu.be/jhFo47juTFI
 
 8.	You will be asked to create an organization. At this moment, you can chose between multiple Bluemix public regions. Choose the "US South" region in Dallas to access all the new services (required to configure Data Science Experience)
 
- > <img src="../4.applicationdeveloper/media/image5b.png" width="400" />
+ > <img src="./media/image5b.png" width="400" />
 
 9.	And then, to create a space
 
- > <img src="../4.applicationdeveloper/media/image5c.png" width="400" />
+ > <img src="./media/image5c.png" width="400" />
 
 10. When it's done, you can go ahead by clicking "I'm ready"
 
- > <img src="../4.applicationdeveloper/media/image5d.png" width="400" />
+ > <img src="./media/image5d.png" width="400" />
 
-#Step 2. Dowload Data Files
+#Step 2. Dowload Application Code & Data Files
 
-1.  Download Lab-NodejsDashboard.zip archive from the github.com location below and save to your laptop:
+1.  Download Lab-NodejsDashboard.zip archive from the github.com location below and save to your laptop: ./application/nodejsDashboard.zip
 
-2.  https://github.com/ibmdataworks/datafirst/tree/master/appdeveloper/nodejsDashboard.zip
+2.	Download the JSON data to upload to Cloudant and the cURL script from the github.com location below and save them to your laptop: ./data/data.zip
 
 Step 3. Create Data Source - Cloudant NoSQL DB Service
 ============================================================
 
 1.  From the Bluemix dashboard catalog menu search for “Cloudant”
 
-2.  Click on the Cloudant Icon <img src="./media/image6.png" width="31" height="27" /> under the Data & Analytics section.
+2.  Click on the Cloudant NoSQL DB Icon <img src="./media/image6.png" width="31" height="27" /> under the Data & Analytics section.
 
-3.  Choose the default pre-filled values in the fields (optionally rename the “Service name:” to AD-Greatoutdoors-DB), select the “Lite Pricing Plan” and click “Create” at the bottom of the page.
+3.  Choose the default pre-filled values in the fields (optionally rename the “Service name:” to AD-Dashboard-Cloudant), select the “Lite Pricing Plan” and click “Create” at the bottom of the page.
 
 4.  In the top, right corner of the page click **Launch**
 
 5.  The Cloudant page will open in a new tab. Select the new tab.
 
-6.  Select the **Databases** tab on the left-hand navigation bar
+6.  Select the **Databases** tab on the left-hand navigation bar.
 
 7.  In the top navigation bar select “**Create Database**”
 
-8.  Create a new database named “**greatoutdoors**” (*Note: database names are case sensitive*). Click **create** to finalize the creation.
+8.  Create a new database named “**greatoutdoors**” (*Note: database names are case sensitive*). Click **Create** to finalize the creation.
 
-9.  In the following steps we will create two indices to allow queries against the data set. Note: Any parameter which is used in a query must be indexed.
+9.  In the following steps we will create a view to compute calculation against the data set.
 
-10.  Click the + symbol on **Design Documents**.
+10.	Click the + symbol on **Design Documents**.
 
-11.  Select **Query Indexes**
+11.	Select New View
 
-12.  Click in the **Index** text box and select all the text
+12.	Fill both fields "_design" and "Index name" with viewByTimestamp
 
-13.  Replace the text with the following text:
+13.	Click in the Map function text box and select all the text
 
- > {
- >
- > "index": {
- >
- > "fields": \[{"evictTS" : "asc"}, "storeID", "zoneID"\]
- >
- > },
- >
- > "name" : "evictTS-index",
- >
- > "type" : "json"
- >
- > }
+14.	Replace the text with the following text:
+function(doc) {
+    var date = new Date(doc.ts);
+    emit(date.getTime(), doc);
+}
 
-14.  Click “**Create Index**”
+This allows a direct access to the data based on a date or a date range, which will be very useful for the application.
 
-15.  Click on the **greatoutdoors** database to return to the database page.
+15.	Click Create Document and Build Index
 
-16.  Create another index by selecting all the text in the existing index box and replacing it with the following text:
+16. You now have to load the data to the Cloudant database. Those JSON files could have been loaded in Cloudant by a streaming application from Wi-Fi hotspot devices deployed in the shop. First, you have to get the Cloudant API URL in the Cloudant service credentials.
 
- > {
- >
- > "type": "text",
- >
- > "name": "text-index",
- >
- > "index": {}
- >
- > }
+17. Go back to your Bluemix homepage, under "Data & Analytics", service "Cloudant NoSQL DB" and then "Service Credentials". Your URL should look like: https://4fde2747-1360-479e-b278-3742634efaee-bluemix:aedb9a613f633229177d7765ecbb95e1467e754317724057f5710963f303e69a@4fde2747-1360-479e-b278-3742634efaee-bluemix.cloudant.com
 
-17.  Click “**Create Index**”
+18. Unzip the data.zip file that you got from step 2 and edit the load_data.sh script with your Cloudant URL. This script calls the Cloudant REST API to bulk load JSON files into a database.
 
- > *Note: If the creation of either index fails, check to be sure that the double quotes have not been mangled by the cut-and-paste process. They should be standard double quotes and not inverted.*
+19. Invoke the script with **bash load_data.sh**. You need cURL to be installed on your machine. If you are using Windows, you can download a portable console emulator such as http://cmder.net/
 
-18.  You are now ready to move to the next service – SDK for Node.js Runtime. Return to the previous browser tab and click on the **catalog** button in the top navigation bar.
+<img src="./media/image0.png">
+
+20.	You are now ready to move to the next service – SDK for Node.js Runtime. Return to the previous browser tab and click on the **catalog** button in the top navigation bar.
 
 Step 4. Create Application - SDK for Node.js Runtime Service
 ==================================================================
