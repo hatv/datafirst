@@ -65,25 +65,15 @@ If you have already created and configured a Spark service instance following th
   
  ![trust notebook](./media/sparkService.gif)
 
-1. Once notebook is created, add dashDB as a data asset for the project: click the '1001' icon (Find and Add Data) -&gt; Connections. If the data source has not yet been added for this project, you have to move to the Project page in order to configure it: Add data assets -&gt; Connections -&gt; New Connection -&gt;
+3. Once notebook is created, add dashDB as a data asset for the project: click the '1001' icon (Find and Add Data) -&gt; Connections. If the data source has not yet been added for this project, you have to move to the Project page in order to configure it: Add data assets -&gt; Connections -&gt; New Connection -&gt;
 
 > <img src="./media/adddataassets.png" width="250">
 
 > <img src="./media/newaddconnection.png" width="250"> 
 
 > <img src="./media/image1.png" width="250"> 
-
-  a.	
-
-  b.	Key in ‘dashDB’ as connection name
-
-  c.	From drop down list of ‘Target Service Instance’ select ‘DS_Sales_DataStore’, the dashDb service you provisioned in Bluemix.
-
-  d.	Select ‘Database’ as ‘BLUDB’.
-
-  e.	Click ‘Create’.
-
-2.	Go back to your default project (using the menu on the top left) to open your Notebook and add the data source
+ 
+4.	Go back to your default project (using the menu on the top left) to open your Notebook and add the data source
 
   a.	Open your notebook in the project in 'Edit' mode using the pencil icon
  
@@ -93,7 +83,7 @@ If you have already created and configured a Spark service instance following th
 
   <img src="./media/addconnectionNotebook.png" width="250"> 
 
-3.	From the Notebook, connect to the sample sales database in dashDB
+5.	From the Notebook, connect to the sample sales database in dashDB
 
   a.	Place the cursor in the first cell. This should be empty, if not clear the contents.
 
@@ -113,7 +103,7 @@ If you have already created and configured a Spark service instance following th
 
   f.	Place cursor in cell2, execute code to connect, load tables from dashDB
   
-3.	Query, join and group data using SparkSQL Data frame API to build aggregated sales for the product line ‘Outdoor Protection’.
+6.	Query, join and group data using SparkSQL Data frame API to build aggregated sales for the product line ‘Outdoor Protection’.
 
   a.	Place cursor in cell3 and execute code to build aggregated sales data frame
 
