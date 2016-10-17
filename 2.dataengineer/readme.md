@@ -12,7 +12,7 @@ Setting up an enterprise level data movement infrastructure and then ingesting t
  > In this lab we will explore how a data engineer utilizes Data Connect and other IBM Bluemix cloud services to easily host, connect, ingest and persist enterprise data on to the cloud.
 
 Video of Lab Steps: https://youtu.be/655-6SPhkNI
-[<img src="./media/DataEngineerVideo.png">](https://youtu.be/655-6SPhkNI)
+[<img src="./media/DataEngineerVideo.png">](https://youtu.be/655-6SPhkNI "Data Engineer Video")
 
 Lab Components: IBM Bluemix Data Connect (formerly DataWorks Forge)
 ===============================================

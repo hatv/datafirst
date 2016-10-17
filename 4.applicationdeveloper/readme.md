@@ -1,45 +1,65 @@
-[<img src="https://github.com/ibmdataworks/datafirst/raw/master/datascientist/media/EventHeader.png">](https://github.com/ibmdataworks/datafirst/)
+[<img src="https://github.com/hatv/dataworks/raw/master/media/IBMBizCo.jpg">](http://www.ibm.com/fr/businessconnect/)
 #Hands on Lab - Application Developer.
-[<img src="https://github.com/ibmdataworks/datafirst/raw/master/datascientist/media/ADE2E.png">](https://github.com/ibmdataworks/datafirst/tree/master/appdeveloper)
+[<img src="./media/ApplicationDeveloperRole.png">](https://github.com/hatv/dataworks/tree/master/4.applicationdeveloper)
 
-As an Application Developer, you need multiple application and data services that facilitate a modern architecture and delivery practices around mobile, microservices, DevOps and continuous delivery. Perform hands-on exercises to quickly build and deploy a live dashboard with Node.js connceted to a document data service, IBM Cloudant based on CouchDB.
+As an Application Developer, you need multiple application and data services that facilitate a modern architecture and delivery practices around mobile, microservices, DevOps and continuous delivery. Perform hands-on exercises to quickly build and deploy a live dashboard with Node.js connected to a document data service, IBM Cloudant based on CouchDB.
 
 
 ##Lab Components: IBM Bluemix Cloud Offering Used
 
 1.  **Source Data Repository**: **Cloudant NoSQL DB**
 
-2.  **Software Development Tools**: **DevOps Services and Git **
+2.  **Software Development Tools**: **DevOps Services and Git**
 
 3.  **Runtime Environment**: **SDK for Node.js**
 
  <img src="./media/image1.png" width="487" height="175" />
 
 Watch Full Lab Video (Optional): https://youtu.be/jhFo47juTFI
- > [<img src="https://github.com/ibmdataworks/datafirst/blob/master/datascientist/media/AD Video.png" width="382">](https://youtu.be/jhFo47juTFI "Business Analyst")
+ > [<img src="./media/ApplicationDeveloperVideo.png" width="382">](https://youtu.be/jhFo47juTFI "Application Developer Video")
 
 
-#Step 1. Get on BlueMix...
+#Step 1. Get on Bluemix...
 
-> NOTE: If you already have a Bluemix account then skip this steps:
+> NOTE: If you already have a Bluemix account, you can skip to the next section.
 
-1.  Go to [www.bluemix.net](http://www.bluemix.net)
+1.  Go to [www.bluemix.net](https://www.bluemix.net)
 
-2.  Click the signup button on the top right
+2.  If you have followed the first lab about the Business Analyst, you should land on the following page where you can choose to signup
 
- > <img src="./media/image2.png" width="624" height="171" />
+ > <img src="./media/image2b.png" width="400" />
 
-3.  On the next page fill in the corresponding fields and click “Create Account”
+	Else, just click the signup button on the top right on the standard Bluemix homepage
 
- > <img src="./media/image3.png" width="624" height="300" />
+ > <img src="../4.applicationdeveloper/media/image2.png" width="400" />
+
+3.  On the next page fill in the corresponding fields and click “Create Account”. If you already registered to Watson Analytics before, your IBMid should be recognized and the registration form should be shortened.
+
+ > <img src="../4.applicationdeveloper/media/image3.png" width="400" />
 
 4.  You will see a page asking you to check your email for next steps. Check your email that you used to sign up for Bluemix
 
- > <img src="./media/image4.png" width="237" height="219" />
+ > <img src="../4.applicationdeveloper/media/image4.png" width="400" />
 
 5.  Click on the “confirm your account” link
 
- > <img src="./media/image5.png" width="396" height="330" />
+ > <img src="../4.applicationdeveloper/media/image5.png" width="400" />
+
+6.	You can then login to Bluemix from [www.bluemix.net](https://www.bluemix.net)
+
+7.	If you don't automatically get to it, follow this link to go to the first configuration steps: https://console.ng.bluemix.net/login?state=/home/onboard/
+
+8.	You will be asked to create an organization. At this moment, you can chose between multiple Bluemix public regions. Choose the "US South" region in Dallas to access all the new services (required to configure Data Science Experience)
+
+ > <img src="../4.applicationdeveloper/media/image5b.png" width="400" />
+
+9.	And then, to create a space
+
+ > <img src="../4.applicationdeveloper/media/image5c.png" width="400" />
+
+10. When it's done, you can go ahead by clicking "I'm ready"
+
+ > <img src="../4.applicationdeveloper/media/image5d.png" width="400" />
 
 #Step 2. Dowload Data Files
 

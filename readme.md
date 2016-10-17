@@ -20,6 +20,6 @@ Perform this hands-on lab and in a few clicks you can standardize, transform, an
 ##[Data Scientist Lab - Click Here](./3.datascientist/)
 As a Data Scientist, you have to turn raw data into meaning using state-of-the-art techniques leveraging open source and enterprise applications. Perform this hands-on lab leveraging Apache Spark, Jupyter, Python, and R to derive sales performance for a specific product line, then build an advanced Machine Learning model in R.
 ##[Application Developer Lab - Click Here](./4.applicationdeveloper/)
-As an Application Developer, you need multiple application and data services that facilitate a modern architecture and delivery practices around mobile, microservices, DevOps and continuous delivery. Perform this hands-on lab to quickly build and deploy a live dashboard with Node.js connceted to a document data service.
+As an Application Developer, you need multiple application and data services that facilitate a modern architecture and delivery practices around mobile, microservices, DevOps and continuous delivery. Perform this hands-on lab to quickly build and deploy a live dashboard with Node.js connected to a document data service.
 
 

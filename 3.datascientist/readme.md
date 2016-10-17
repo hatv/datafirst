@@ -94,7 +94,7 @@ A Bluemix ID is needed to log into DSX. If you already have a Bluemix account, s
  
  > <img src="./media/image13.png">
  
- > You are now all set to start the Data Science Experience hands-on exercices.
+ > You can go back to the homepage and you are now all set to start the Data Science Experience hands-on exercices.
  
  > <img src="./media/image4.png">
  
