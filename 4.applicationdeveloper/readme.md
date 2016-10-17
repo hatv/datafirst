@@ -216,10 +216,10 @@ Step 4. Create Application - SDK for Node.js Runtime Service
 
 12.  Node.js runtime Service
 
-    a.  Browse to your mybluemix.net URL where your web application is hosted. You should see a d3.js graph with 5 bars representing the 5 zones in the store.
+    a.  Browse to your mybluemix.net URL where your web application is hosted. You should see a live graph with bars representing the people in the 5 zones of each of this company stores.
 
-    b.  After 30 seconds, the application should read from the Cloudant database and the values for each store should change.
+    b.  The application should update from the Cloudant database and get the values for current timestamp.
 
-<img src="./media/image10.png" width="625" height="306" />
+<img src="./media/image10.png" width="625" />
 
 ***End of Lab***

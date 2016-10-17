@@ -1,5 +1,5 @@
 [<img src="./media/IBMBizCo.jpg">](http://www.ibm.com/fr/businessconnect/)
-#IBM Watson DataWorks - Hands on Labs
+#IBM Watson DataWorks - Hands-on Labs
 ##Experience the IBM Watson DataWorks Project
 ###Where teams can collaboratively work together...
 
@@ -7,7 +7,7 @@
 [<img src="./media/workflow.png">](https://github.com/hatv/dataworks/)
 ###Accelerating End to End Analytics from months to minutes...
 In this series of hands-on lab, you follow the story of an outdoor equipment retailer focused on improving its margin.
-You'll use different data storage technologies such as Bluemix Object Store (OpenStack Swift), DashDB (RDBMS), Cloudant (NoSQL CouchDB compatible).
+You'll use different data storage technologies such as Bluemix Object Store (OpenStack Swift), DashDB (RDBMS), Cloudant (NoSQL CouchDB compatible database).
 For demonstration purpose and to keep full independance between the labs, different datasets are successively loaded in different data storages.
 The objective of this series is to let you manipulate several cloud interfaces and components that can be used by your data team to provide data loading, transformation, exploration, analytics, reporting and so on.
 You can successively take the role of a Business Analyst, a Data Engineer, a Data Scientist and an Application Developer.
