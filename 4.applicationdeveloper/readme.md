@@ -63,9 +63,9 @@ Watch Full Lab Video (Optional): https://youtu.be/jhFo47juTFI
 
 #Step 2. Dowload Application Code & Data Files
 
-1.  Download Lab-NodejsDashboard.zip archive from the github.com location below and save to your laptop: ./application/nodejsDashboard.zip
+1.  Download Lab-NodejsDashboard.zip archive from the github.com location below and save to your laptop: [nodejsDashboard.zip](./application/nodejsDashboard.zip)
 
-2.	Download the JSON data to upload to Cloudant and the cURL script from the github.com location below and save them to your laptop: ./data/data.zip
+2.	Download the JSON data to upload to Cloudant and the cURL script from the github.com location below and save them to your laptop: [data.zip](./data/data.zip)
 
 Step 3. Create Data Source - Cloudant NoSQL DB Service
 ============================================================
@@ -102,7 +102,7 @@ function(doc) {
     emit(date.getTime(), doc);
 }
 
-This allows a direct access to the data based on a date or a date range, which will be very useful for the application.
+ > This allows a direct access to the data based on a date or a date range, which will be very useful for the application.
 
 15.	Click Create Document and Build Index
 

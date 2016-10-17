@@ -49,7 +49,7 @@ Before You Begin
 
 2.  If you have followed the first lab about the Business Analyst, you should land on the following page where you can choose to signup
 
- > <img src="./media/image2b.png" width="400" />
+ > <img src="../4.applicationdeveloper/media/image2b.png" width="400" />
 
 	Else, just click the signup button on the top right on the standard Bluemix homepage
 
