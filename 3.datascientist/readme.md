@@ -1,8 +1,8 @@
-[<img src="https://github.com/ibmdataworks/datafirst/raw/master/datascientist/media/EventHeader.png">](https://github.com/ibmdataworks/datafirst/)
+[<img src="https://github.com/hatv/dataworks/raw/master/media/IBMBizCo.jpg">](http://www.ibm.com/fr/businessconnect/)
 #Hands on Lab - Data Scientist.
-[<img src="https://github.com/ibmdataworks/datafirst/raw/master/datascientist/media/DSE2E.png">](https://github.com/ibmdataworks/datafirst/tree/master/datascientist)
+[<img src="./media/DataScientistRole.png">](https://github.com/hatv/dataworks/tree/master/3.datascientist)
 
-As a Data Scientist, you have to turn raw data into meaning using state-of-the-art techniques leveraging open source and enterprise applications. Perform hands-on exercises leveraging Apache Spark, Jupyter, Python, and R to derive sales performance for a specific product line, then build an advanced Machine Learning model in R.
+As a Data Scientist, you have to turn raw data into meaning using state-of-the-art techniques leveraging open source and enterprise applications. Perform this hands-on lab leveraging Apache Spark, Jupyter, Python, and R to derive sales performance for a specific product line, then build an advanced Machine Learning model in R.
 
 ##Welcome to IBM Data Science Experience (DSX) - datascience.ibm.com
 
