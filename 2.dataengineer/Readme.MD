@@ -297,7 +297,7 @@ Create Data Flow (Activity)
 
 11.  The activity is executed immediately. An icon is added to the activity list dashboard. We will revisit this icon in the later section.
 
-> <img src="./media/image17.png" width="193" height="71" />
+> <img src="./media/image17.png" width="193" />
 >
 > **IMPORTANT**: You would have noticed that while creating the target database we never ported the schema. This is because, if the schema doesn’t exist in the target database, it is created automatically from the source data type. This feature enhances and expedites the overall project productivity.
 
@@ -321,7 +321,7 @@ Create Data Flow (Activity)
 
 6.  The activity is executed immediately and an icon is added to the activity list dashboard.
 
- > <img src="./media/image18.png" width="235" height="87" />
+ > <img src="./media/image18.png" width="235" />
 
 Validate Data Flow Run Activity
 -------------------------------
@@ -330,7 +330,7 @@ Validate Data Flow Run Activity
 
 2.  Click on the three dots (<img src="./media/image19.png" width="17" height="37" />) on the right-top corner for the activity titled “LoadDataAsIs”. This will pop up additional sub-activity icons
 
- > <img src="./media/image20.png" width="267" height="157" />
+ > <img src="./media/image23.png" width="267" height="157" />
  > 
  > You can Run (<img src="./media/image21.png" width="43" height="42" />), Schedule (<img src="./media/image22.png" width="45" height="45" />), delete (<img src="./media/image23.png" width="42" height="42" />), edit (<img src="./media/image23b.png" width="42" height="42" />) the activity OR find more details (<img src="./media/image24.png" width="41" height="42" />) about the run.
 
