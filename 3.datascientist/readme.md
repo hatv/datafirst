@@ -58,15 +58,49 @@ A Bluemix ID is needed to log into DSX. If you already have a Bluemix account, s
 
 1. Go to [http://datascience.ibm.com/](http://datascience.ibm.com/)
 
-2. Click the Log In button on the DSX landing page to sign in with your Bluemix credentials. Type in your Bluemix email address and password, then click Sign In.
+2. Click the Sign In button on the DSX landing page to sign in with your Bluemix credentials.
 
  > <img src="./media/image3.png">
 
- > You are now in the Data Science Experience. Depending on the plan you chose, your environment is automatically set up with at least one Apache Spark instance and at least 5 GB of object storage. From here you can create a new project, notebook, or connection. You can also explore any of the tutorials, videos, sample notebooks or articles in the community.
-
+ > If you have followed the previous labs, your Bluemix ID should be identified and you can continue with your Bluemix account. Else type in your Bluemix email address and password, then click Sign In.
+ 
+ > <img src="./media/image5.png">
+ 
+ > DSX offers you to create a Spark instance with a 5GB of Object Storage.
+  
+ > <img src="./media/image6.png">
+ 
+ > Due to a defect to be fixed, you may have to go through your Settings page before creating the Spark instance.
+   
+ > <img src="./media/image7.png">
+ 
+ > There, you can select your Bluemix organization to use in DSX.
+ 
+ > <img src="./media/image9.png">
+ 
+ > If your organization is recognized and properly set, you can access to your Bluemix data and analytics services in the Services tab.
+ 
+ > <img src="./media/image10.png">
+ 
+ > Go to the Default Project.
+ 
+ > <img src="./media/image11.png">
+ 
+ > In the Settings for this project, you can configure the Spark Service to be used.
+ 
+ > <img src="./media/image12.png">
+ 
+ > You can use a Spark service already set in your Bluemix organization or create a new one.
+ 
+ > <img src="./media/image13.png">
+ 
+ > You are now all set to start the Data Science Experience hands-on exercices.
+ 
  > <img src="./media/image4.png">
+ 
+ > From here you can create a new project, notebook, or connection. You can also explore any of the tutorials, videos, sample notebooks or articles in the community.
 
-#Step 2. Perform Hands on Exercises.
+#Step 2. Perform Hands-on Exercises.
 
 ##[Part 1. Root Cause Analysis (Interactive Analytics) Start Here](./interactive-analytics/)
 This lab exercise uses an IPython Notebook in DSX to connect with dashDB, explores sales, product data and analyze sales performance for a specific product line. Pixiedust, a Python based visualization package is used to visualize the results.
