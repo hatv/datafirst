@@ -57,21 +57,23 @@ If you have already created and configured a Spark service instance following th
 
 <img src="./media/createnew.png" width="250"> 
  
-2. Type ‘DS-InteractiveAnalytics-Notebook’ as Notebook name, click on ‘from URL’ link and specify:  https://raw.githubusercontent.com/hatv/dataworks/master/datascientist/interactive-analytics/notebook/DSX_IA_Lab.ipynb
+2. Type ‘DS-InteractiveAnalytics-Notebook’ as Notebook name, click on ‘from URL’ link and specify:  https://raw.githubusercontent.com/hatv/dataworks/master/3.datascientist/interactive-analytics/notebook/DSX_IA_Lab.ipynb
 
  ![start notebook](./media/createNotebook.gif)
 
   a.	 Select ‘Trust this Notebook to run with your Privileges’ and click on ‘Create Notebook’
   
  ![trust notebook](./media/sparkService.gif)
-1. Once notebook is created, add dashDB as a data asset for the project
 
-<img src="./media/adddataassets.png" width="250"> 
+1. Once notebook is created, add dashDB as a data asset for the project: click the '1001' icon (Find and Add Data) -&gt; Connections. If the data source has not yet been added for this project, you have to move to the Project page in order to configure it: Add data assets -&gt; Connections -&gt; New Connection -&gt;
 
-  a.	Now click on the '1001' icon then Connections -> New Connection
-  
+> <img src="./media/adddataassets.png" width="250">
 
-<img src="./media/newaddconnection.png" width="250"> 
+> <img src="./media/newaddconnection.png" width="250"> 
+
+> <img src="./media/image1.png" width="250"> 
+
+  a.	
 
   b.	Key in ‘dashDB’ as connection name
 
@@ -81,7 +83,7 @@ If you have already created and configured a Spark service instance following th
 
   e.	Click ‘Create’.
 
-1.	Go back to your default project (using the menu on the top left) to open your Notebook and add the data source
+2.	Go back to your default project (using the menu on the top left) to open your Notebook and add the data source
 
   a.	Open your notebook in the project in 'Edit' mode using the pencil icon
  
@@ -91,7 +93,7 @@ If you have already created and configured a Spark service instance following th
 
   <img src="./media/addconnectionNotebook.png" width="250"> 
 
-1.	From the Notebook, connect to the sample sales database in dashDB
+3.	From the Notebook, connect to the sample sales database in dashDB
 
   a.	Place the cursor in the first cell. This should be empty, if not clear the contents.
 
@@ -110,6 +112,7 @@ If you have already created and configured a Spark service instance following th
   e.	Place cursor in cell1, execute code to capture dashDB database credentials
 
   f.	Place cursor in cell2, execute code to connect, load tables from dashDB
+  
 3.	Query, join and group data using SparkSQL Data frame API to build aggregated sales for the product line ‘Outdoor Protection’.
 
   a.	Place cursor in cell3 and execute code to build aggregated sales data frame
@@ -121,9 +124,10 @@ If you have already created and configured a Spark service instance following th
   ![execute in notebook](./media/finalViz.gif)
 
 7.	You can move the mouse over the visual to see data points on each bar. The chart shows a steady decline in sales for ‘Outdoor Protection’ product line.
+
 8.	Pixiedust is an open source visualization package developed by IBM labs. You can visualize SparkSQL data frames with a single API call and interactively access raw data, pick visual options and stow data away to files or IBM Cloudant or Object Storage.
 
 --- 
 #### End of Lab
 
-##### [Next Steps: Build your next Spark Analytics project using IBM Data Science Experience.](https://github.com/ibmdataworks/datafirst/tree/master/datascientist/machinelearning)
+##### [Next Steps: Build your next Spark Analytics project using IBM Data Science Experience.](../machinelearning)
