@@ -32,8 +32,8 @@ Before You Begin
 
 1.  Download the two data files (GOProductDim, GOSalesFact) from the github.com location below to your laptop (right-click and "Save link as..."):
 
- > https://raw.githubusercontent.com/hatv/dataworks/master/2.dataengineer/data/GOProductDim
- > https://raw.githubusercontent.com/hatv/dataworks/master/2.dataengineer/data/GOSalesFact
+ > https://raw.githubusercontent.com/hatv/dataworks/master/2.dataengineer/data/GOProductDim.csv
+ > https://raw.githubusercontent.com/hatv/dataworks/master/2.dataengineer/data/GOSalesFact.csv
 
 2.  Log in to your IBM Cloud Bluemix account <https://console.ng.bluemix.net/login?state=/home/onboard/>
 
