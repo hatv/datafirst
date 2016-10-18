@@ -92,15 +92,15 @@ Step 3. Create Data Source - Cloudant NoSQL DB Service
 
 11.	Select New View
 
-12.	Fill both fields "_design" and "Index name" with viewByTimestamp
+12.	Fill both fields "_design" and "Index name" with **viewByTimestamp**
 
 13.	Click in the Map function text box and select all the text
 
 14.	Replace the text with the following text:
-function(doc) {
-    var date = new Date(doc.ts);
-    emit(date.getTime(), doc);
-}
+ > function(doc) {
+ >    var date = new Date(doc.ts);
+ >    emit(date.getTime(), doc);
+ > }
 
  > This allows a direct access to the data based on a date or a date range, which will be very useful for the application.
 
